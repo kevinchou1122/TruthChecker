@@ -8,7 +8,7 @@ import numpy as np
 from tqdm import tqdm
 
 
-csv_file_path = '/kaggle/input/fake-news-detection-dataset/fake_news_dataset.csv'  # Replace with your CSV file path
+csv_file_path = '/kaggle/input/fake-news-detection-dataset/fake_news_dataset.csv'  
 
 label_column_name = 'label'
 text_column_name = 'text'
@@ -141,15 +141,13 @@ from torch.utils.data import DataLoader
 import os
 from datasets import Dataset
 
-# Check for GPU availability
+
 print("GPU Available:", torch.cuda.is_available())
 print("GPU Name:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "CPU")
 
-# Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-# Print dataset sizes
 print(f"Train dataset size: {len(train_dataset)}")
 print(f"Validation dataset size: {len(val_dataset)}")
 
